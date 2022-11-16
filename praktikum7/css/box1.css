@@ -1,0 +1,46 @@
+body {
+    display: flex;
+}
+.box1 {
+    background-color: #DEF5E5;
+    height: 570px;
+    width: 23%;
+    margin: 30px 15px 30px 30px;
+}
+
+.box1 img {
+    height: 300px;
+}
+
+.box2 {
+    background-color: #BCEAD5;
+    height: 570px;
+    width: 23%;
+    margin: 30px 15px 30px 15px;
+}
+
+.box2 img {
+    height: 300px;
+}
+
+.box3 {
+    background-color: #9ED5C5;
+    height: 570px;
+    width: 23%;
+    margin: 30px 15px 30px 15px;
+}
+
+.box3 img {
+    height: 290px;
+}
+
+.box4 {
+    background-color: #8EC3B0;
+    height: 570px;
+    width: 23%;
+    margin: 30px 30px 30px 15px;
+}
+
+.box4 img {
+    height: 290px;
+}
