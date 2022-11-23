@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #CFF5E7;
+    height: 15vh;
+    line-height: 15vh;
+}
+
+main {
+    display: flex;
+    height: 70vh;
+}
+
+article {
+    order: 2;
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    order: 3;
+    background-color: #A0E4CB;
+}
+
+nav {
+    flex: 1;
+    order: 1;
+    background-color: #59C1BD;
+}
+
+footer {
+    background-color: #0D4C92;
+    height: 15vh;
+}
