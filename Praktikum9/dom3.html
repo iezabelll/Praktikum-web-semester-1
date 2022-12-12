@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parkir gedung DPR</title>
+</head>
+<body>
+    <h1>Harga Parkir</h1>
+    <label for="in">Jam Masuk: </label>
+    <input type="number" id="in">
+    <br>
+    <label for="out">Jam Keluar: </label>
+    <input type="number" id="out">
+    <br>
+    <span id="durasi"></span>
+    <br>
+    <span id="hasil"></span>
+    <br>
+    <button type="button" onclick="Hitung_parkir()">Hitung</button>
+
+    <script>
+        function Hitung_parkir(){
+            let jm = document.getElementById("in").value;
+            let jk = document.getElementById("out").value;
+            let durasi = jk-jm;
+
+            let tarif_awal = 3000;
+            let sw = Math.round(durasi-2);
+            let tarif_lanjutan = sw*1000;
+            let total = tarif_awal + tarif_lanjutan;
+
+            document.getElementById("durasi").innerHTML = "durasi = " + durasi + " jam";
+            document.getElementById("hasil").innerHTML = "total bayar = Rp. " + total;
+        }
+    </script>
+
+</body>
+</html>
