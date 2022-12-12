@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Mata Uang</title>
+    
+</head>
+
+<body>
+    <fieldset>
+        <legend>Mata Uang asing ke Rupiah</legend>
+        <table>
+            <tr>
+                <td>Nilai Awal</td>
+                <td>Dari</td>
+                <td>Nilai Akhir</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="nilai1" onchange="convert()"></td>
+                <td>
+                    <select id="pilih" onchange="convert()">
+                        <option value="o">---Pilih---</option>
+                        <option value="USD">Dollar US</option>
+                        <option value="SGD">Dolar Singapura</option>
+                        <option value="Ringgit">Ringgit Malaysia</option>
+                        <option value="Yen">Yen Jepang</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Riyal">Riyal Saudi</option>
+                    </select>
+                </td>
+                <td><input id="hasil" value="0" readonly></td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+
+
+    <script>
+        function convert() {
+            let n1 = document.getElementById("nilai1").value;
+            let kurs = document.getElementById("pilih").value;
+            let hasil;
+
+            if (kurs == "USD") {
+                hasil = n1 * 9915;
+            }
+            else if (kurs == "SGD") {
+                hasil = n1 * 13472;
+            }
+            else if (kurs == "Ringgit") {
+                hasil = n1 * 874;
+            }
+            else if (kurs == "Yen") {
+                hasil = n1 * 120;
+            }
+            else if (kurs == "Euro") {
+                hasil = n1 * 15888;
+            }
+            else if (kurs == "Riyal") {
+                hasil = n1 * 3592;
+            }
+            else {
+                hasil = 0;
+            }
+
+            document.getElementById("hasil").value = String("Rp. " + hasil);
+        }
+    </script>
+</body>

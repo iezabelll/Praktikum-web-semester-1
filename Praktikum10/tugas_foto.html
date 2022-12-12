@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokoh Hebat Indonesia</title>
+    <style>
+        body {
+            background-size: cover;
+            padding-top: 50px;
+            font-family: comic sans ms;
+        }
+
+        div {
+            margin: auto;
+            width: 600px;
+            height: 80vh;
+            background: white;
+            border-radius: 5px;
+            padding: 30px;
+            justify-content: center;
+            display: grid;
+        }
+
+        div select {
+            font-size: 24px;
+        }
+
+        div figure {
+            display: flex;
+            justify-content: center;
+        }
+
+        div figure img {
+            border-radius: 10px;
+            box-shadow: 2px 0 2px rgb(80, 77, 77);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Pilih Tokoh Hebat Favorit Kamu</h2>
+
+        <select id="selectImg" onchange="imgPick()">
+            <option value="">-- Choice Characters --</option>
+            <option value="Jokowi">Mang Owi</option>
+            <option value="mega">Mbak mega</option>
+        </select>
+        <figure>
+            <img id="foto" src="" alt="">
+        </figure>
+    </div>
+
+
+
+    <script>
+        function imgPick() {
+            let pick = document.getElementById("selectImg").value;
+            let images = document.getElementById("foto");
+
+            if (pick == "Jokowi") {
+                images.src = "img/jokowi.jpg";
+                images.width = 250;
+            }
+            if (pick == "mega") {
+                images.src = "img/mega.jpg";
+                images.width = 250;
+            }
+        }
+    </script>
+</body>
+
+</html>
